@@ -20,3 +20,9 @@ addons:
     build_command_prepend:
     build_command: ant
     branch_pattern: coverity
+
+deploy:
+  provider: releases
+  api_key: "$GITHUB_AUTH_TOKEN"
+  file: "/home/travis/build/yuki-js/AppletPlayground/SatoChipApplet.cap"
+  skip_cleanup: true
